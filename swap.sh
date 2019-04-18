@@ -29,7 +29,7 @@ fi
 
 
 ## Run
-sudo fallocate -l $SWAP_SIZE $SWAP_PATH  # Allocate size
+sudo dd if=/dev/zero of=/swapfile count=4 bs=$SWAP_SIZE GiB 
 sudo chmod 600 $SWAP_PATH                # Set proper permission
 sudo mkswap $SWAP_PATH                   # Setup swap         
 sudo swapon $SWAP_PATH                   # Enable swap
