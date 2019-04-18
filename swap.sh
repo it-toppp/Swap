@@ -29,7 +29,7 @@ fi
 
 
 ## Run
-sudo dd if=/dev/zero of=/swapfile count=4 bs=$SWAP_SIZE GiB 
+sudo dd if=/dev/zero of=/swapfile count=$SWAP_SIZE bs=1MiB
 sudo chmod 600 $SWAP_PATH                # Set proper permission
 sudo mkswap $SWAP_PATH                   # Setup swap         
 sudo swapon $SWAP_PATH                   # Enable swap
