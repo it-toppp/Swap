@@ -31,7 +31,7 @@ fi
 ## Run
 dd if=/dev/zero of=/swapfile count=$SWAP_SIZE bs=1MiB
 chmod 600 $SWAP_PATH                # Set proper permission
-mkswap $S_PATH                   # Setup swap         
+mkswap $SWAP_PATH                   # Setup swap         
 swapon $SWAP_PATH                   # Enable swap
 echo "$SWAP_PATH   none    swap    sw    0   0" | tee /etc/fstab -a # Add to fstab
 
